@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Abdoulaye Store</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- Les data-attribute servent à stocker des données dans le html sans les afficher à l'utilisateur 
+             Ensuite on récupère ces données facilement en JS.
+        -->
+        <div class="header">
+            <div class="shop-name">
+                <span class="name">Abdoulaye Store 🇨🇮</span>
+            </div>
+
+            <div class="liens-nagivation">
+                <a class="nav-link" href="#">Nouveau</a>
+                <a class="nav-link" href="#">Homme</a>
+                <a class="nav-link" href="#">Femme</a>
+                <a class="nav-link" href="#">Enfant</a>
+                <a class="nav-link" href="#">Sports</a>
+            </div>
+
+            <div class="third-header">
+
+                <div class="recherche-barre">
+                    <!--Icone de recherche -->
+                    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" stroke-width="1.5" d="M13.962 16.296a6.716 6.716 0 01-3.462.954 6.728 6.728 0 01-4.773-1.977A6.728 6.728 0 013.75 10.5c0-1.864.755-3.551 1.977-4.773A6.728 6.728 0 0110.5 3.75c1.864 0 3.551.755 4.773 1.977A6.728 6.728 0 0117.25 10.5a6.726 6.726 0 01-.921 3.407c-.517.882-.434 1.988.289 2.711l3.853 3.853"></path></svg>
+                    <input type="text" placeholder="Rechercher">
+                </div>
+
+                <!--Icone de favoris-->
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" stroke-width="1.5" d="M16.794 3.75c1.324 0 2.568.516 3.504 1.451a4.96 4.96 0 010 7.008L12 20.508l-8.299-8.299a4.96 4.96 0 010-7.007A4.923 4.923 0 017.205 3.75c1.324 0 2.568.516 3.504 1.451l.76.76.531.531.53-.531.76-.76a4.926 4.926 0 013.504-1.451"></path></svg>
+
+                <!--Panier-->
+                <div style="position: relative;">
+                    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" stroke-width="1.5" d="M8.25 8.25V6a2.25 2.25 0 012.25-2.25h3a2.25 2.25 0 110 4.5H3.75v8.25a3.75 3.75 0 003.75 3.75h9a3.75 3.75 0 003.75-3.75V8.25H17.5"></path></svg>
+                    <span id="compteur-panier">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!--Je vais drop quelques articles ici-->
+        <div class="section-article">
+
+            <div>
+                <img  class="photo-article" src="assets/images/pullcorteiz.webp">
+                <div>
+                    <p>Nouvelle Collection</p>
+                    <p>CORTEIZ</p>
+                    <p>x Island Puff Hoodie zippé</p>
+                    <p>$320</p>
+                </div>
+                <div class="buttons-panier-achat">
+                    <button 
+                    class="button-panier"
+                    data-id="1"
+                    data-nom="x Island Puff Hoodie zippé"
+                    data-prix="320"
+                    data-image="pullcorteiz.webp"
+                    >Ajouter au Panier</button>
+                    <button class="button-achat">Acheter Maintenant</button>
+                </div>
+            </div>
+
+            <div>
+                <img  class="photo-article" src="assets/images/tshirtblanccorteiz.webp">
+                <div>
+                    <p>CORTEIZ</p>
+                    <p>t-shirt OG Island Blanc</p>
+                    <p>$133</p>
+                </div>
+                <div class="buttons-panier-achat">
+                    <button
+                     class="button-panier"
+                     data-id="2"
+                     data-nom="t-shirt OG Island"
+                     data-prix="133"
+                     data-image="tshirtblanccorteiz.webp"
+                     >Ajouter au Panier</button>
+                    <button class="button-achat">Acheter Maintenant</button>
+                </div>
+            </div>
+
+            <div>
+                <img  class="photo-article" src="assets/images/t-shirtnoircorteiz.webp">
+                 <div>
+                    <p>CORTEIZ</p>
+                    <p>t-shirt OG Island Noir</p>
+                    <p>$133</p>
+                </div>
+                <div class="buttons-panier-achat">
+                    <button 
+                    class="button-panier"
+                    data-id="3"
+                    data-nom="t-shirt OG Island Noir"
+                    data-prix="133"
+                    data-image="t-shirtnoircorteiz.webp"
+                    >Ajouter au Panier</button>
+                    <button class="button-achat">Acheter Maintenant</button>
+                </div>
+            </div>
+
+            <div>
+                <img  class="photo-article" src="assets/images/fullniketech.png">
+                <div>
+                    <p>Nike Tech</p>
+                    <p>Nike Tech complet</p>
+                    <p>Windrunner pour homme</p>
+                    <p>$280</p>
+                </div>
+                <div class="buttons-panier-achat">
+                    <button 
+                    class="button-panier"
+                    data-id="4"
+                    data-nom="Nike Tech complet"
+                    data-prix="280"
+                    data-image="fullniketech.png"
+                    >Ajouter au Panier</button>
+                    <button class="button-achat">Acheter Maintenant</button>
+                </div>
+            </div>
+
+            <div>
+                <img class="photo-article" src="assets/images/pantalonnoirnike.jpeg">
+                <div>
+                    <p>Nike Sportswear Club</p>
+                    <p>Pantalon à maille à ourlet</p>
+                    <p>ouvert pour homme</p>
+                    <p>64$</p>
+                </div>
+                <div class="buttons-panier-achat">
+                    <button 
+                    class="button-panier"
+                    data-id="5"
+                    data-nom="Pantalon à maille à ourlet"
+                    data-prix="64"
+                    data-image="pantalonnoirnike.jpeg"
+                    >Ajouter au Panier</button>
+                    <button class="button-achat">Acheter Maintenant</button>
+                </div>
+            </div>
+
+            <div>
+                <img  class="photo-article" src="assets/images/niketechhaut.jpeg">
+                <div>
+                    <p>Nike Tech</p>
+                    <p>Veste à zip en France</p>
+                    <p>Windrunner pour homme</p>
+                    <p>$160</p>
+                </div>
+                <div class="buttons-panier-achat">
+                    <button 
+                    class="button-panier"
+                    data-id="6"
+                    data-nom="Veste à zip en France"
+                    data-prix="160"
+                    >Ajouter au Panier</button>
+                    <button class="button-achat">Acheter Maintenant</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="affichage-panier" class="modal-panier">
+            <div class="panier-contenu">
+                <div class="panier-header">
+                    <h2>Mon Panier</h2>
+                    <button id="fermer-panier" class="btn-fermer">✕</button>
+                </div>
+                <div id="liste-produits-panier">
+                    <!-- Les produits s'afficheront ici dyqt -->
+                </div>
+                <div class="panier-footer">
+                    <h3>Total : <span id="total-panier">0$</span></h3>
+                    <button class="btn-commander">Commander</button>
+                </div>
+            </div>
+        </div>
+        <script src="js/app.js"></script>
+    </body>
+</html>
